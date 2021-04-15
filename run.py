@@ -27,3 +27,4 @@ def hit():
   except Exception as e:
     print(e)
     print("Failed loading browser")
+hit()
