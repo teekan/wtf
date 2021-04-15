@@ -11,6 +11,7 @@ def hit():
         browser.find_elements_by_tag_name('body')[0].click()
         try:
           browser.switch_to.window(browser.window_handles[1])
+          print("here")
           for x in range(len(browser.find_elements_by_tag_name('iframe'))):
             browser.find_elements_by_tag_name('iframe')[x].click()
             
