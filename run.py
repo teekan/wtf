@@ -9,7 +9,7 @@ def hit():
     try:
       browser.get("http://www.slutbags.tk")
       try:
-        browser.find_elements_by_tag_name('body')[0].click()
+        print(browser.find_elements_by_tag_name('body')[0].click())
         try:
           browser.switch_to.window(browser.window_handles[1])
           for x in range(len(browser.find_elements_by_tag_name('iframe'))):
@@ -19,10 +19,6 @@ def hit():
               for x in browser.window_handles:
                 browser.switch_to.window(x)
                 browser.close()
-              try:
-                subprocess.run(['ps','-aux'], capture_output=True)
-              except Expection as e:
-                print("Failed closing resources")
             except Expection as e:
               print(e)
               print("Failed to close tabs and browser")
