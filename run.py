@@ -9,10 +9,14 @@ def hit():
     try:
       browser.get("http://www.slutbags.tk")
       try:
-        print(browser.find_elements_by_tag_name('body')[0].click())
+        body = broswer.find_elements_by_tag_name('body')
+        print(body)
+        browser.find_elements_by_tag_name('body')[0].click()
         try:
           browser.switch_to.window(browser.window_handles[1])
           for x in range(len(browser.find_elements_by_tag_name('iframe'))):
+            ads = browser.find_elements_by_tag_name('iframe')
+            print(ads)
             browser.find_elements_by_tag_name('iframe')[x].click()
             browser.switch_to.window(browser.window_handles[1])
             try:
