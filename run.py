@@ -13,6 +13,7 @@ def hit():
           browser.switch_to.window(browser.window_handles[1])
           for x in range(len(browser.find_elements_by_tag_name('iframe'))):
             browser.find_elements_by_tag_name('iframe')[x].click()
+            
         except Exception as e:
           print(e)
           print("Failed clicking ads")
