@@ -20,6 +20,7 @@ def hit():
             browser.find_elements_by_tag_name('iframe')[x].click()
             browser.switch_to.window(browser.window_handles[1])
             try:
+              print(browser.window_handles)
               for x in browser.window_handles:
                 browser.switch_to.window(x)
                 browser.close()
