@@ -4,7 +4,7 @@ opts = Options()
 opts.headless = True
 def hit():
   try:
-    browser = webdriver.Firefox(options=opts,'/home/ubuntu/geckodriver')
+    browser = webdriver.Firefox(options=opts,executable_path='/home/ubuntu/geckodriver')
     try:
       browser.get("http://www.slutbags.tk")
       try:
