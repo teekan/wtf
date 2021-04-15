@@ -1,3 +1,4 @@
+import subprocess
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 opts = Options()
@@ -18,7 +19,10 @@ def hit():
               for x in browser.window_handles:
                 browser.switch_to.window(x)
                 browser.close()
-                print("ur pipe code")
+              try:
+                subprocess.run(['ps','-aux'], capture_output=True)
+              except Expection as e:
+                print("Failed closing resources")
             except Expection as e:
               print(e)
               print("Failed to close tabs and browser")
