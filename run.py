@@ -9,7 +9,7 @@ def hit():
     try:
       browser.get("http://www.slutbags.tk")
       try:
-        body = broswer.find_elements_by_tag_name('body')
+        body = browser.find_elements_by_tag_name('body')
         print(body)
         browser.find_elements_by_tag_name('body')[0].click()
         try:
